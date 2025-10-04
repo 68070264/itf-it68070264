@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <nav>
         <p>68070264</p>
@@ -16,29 +18,50 @@
         <h1>ITF Simple Bank</h1>
         <p>Welcome to my first HTML + CSS + JS website</p>
     </nav2>
+
     <div class="container">
-        <div>
-            <h3>Account Overview</h3>
-            <h4>Account Information</h4>
-            <h5>Name: Tanunya Asawasongkram</h5>
-            <h5>Type: Saving Account</h5>
-            <h4>Balance Information</h4>
 
-            <!-- Current account balance: <input type="number" id= "myinput" value= "0">
-            <button onclick="add()">+1</button> -->
-            Current account balance: <input type="number" id= "myinput" value= "0">
-            <p>Current cash balance: <input type="number" id= "cashbalance" value= "0"></p>
-            <button>Change</button>
-            <h4>Bank Operation</h4>
+        <div class="card">
+            <h3>Transaction History<img src="/Users/cyntny/Documents/pythoncode/ITF/itf-it68070264/photo.png"/></h3> 
+            <textarea id="historyLog" rows="8" style="width: 100%;" readonly></textarea>
+        </div>
 
-            
-        </div>
-        
-        <div>
-            Right
-        </div>
-    </div>
-    <script src="script.js"></script>
+        <div class="columns-container">
+
+            <div class="card">
+                <h3>Account Overview</h3>
+                <h4>Account Information</h4>
+                <p>Name: Tanunya Asawasongkram</p>
+                <p>Type: Saving Account</p>
+                <h4>Balance Information</h4>
+                Current account balance: <input type="number" id="myinput" value="0">
+                <p>Current cash balance: <input type="number" id="cashbalance" value="0"></p>
+                <p><button id="changeBtn">Change</button></p>
+                <h4>Bank Operation</h4>
+                <label for="transaction-type"></label>
+                <select name="transaction" id="transaction-type">
+                    <option value="deposit">Deposit</option>
+                    <option value="withdraw">Withdraw</option>
+                </select>
+                <p><input type="number" id="bankoperation" value="0">
+                <p><button id="proceedBtn">Proceed</button></p>
+            </div>
+
+            <div class="card">
+                <h3>Financial Tools</h3>
+                <h4>Currency Converter</h4>
+                <p>Input balance: <input type="number" id="inputbalance" value="0"></p>
+                <p>Output balance:<input type="number" id="outputbalance" value="0"></p>
+                <p>Input currency:
+                    <label for="currency-type"></label>
+                    <select name="currency" id="currency-type">
+                        <option value="USD">USD</option>
+                        <option value="THB">THB</option>
+                    </select> <button>Convert</button>
+                </p>
+            </div>
+
+        </div> </div> <script src="script.js"></script>
 </body>
-</html>
 
+</html>
